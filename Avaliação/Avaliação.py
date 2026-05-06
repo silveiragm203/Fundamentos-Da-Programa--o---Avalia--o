@@ -3,7 +3,7 @@ Quantidade = int(input("Digite Quantos alunos: "))
 
 Nomes = []
 média_Final = 7.00
-média_Reprovação = 4.00
+média_Reprovação = 4.00   #Sempre seguir aquilo que for pedido sem nenhum tipo de alteração , média de reprovação = 5.00. Muito importante se quiser ter sucesso na area de programador.
 
 for i in range(Quantidade):
     nome = input(f"Digite o nome{i + 1}: ")
@@ -18,7 +18,7 @@ for i in range(Quantidade):
 
     situacao = "";
 
-    if média > média_Reprovação < média_Final:
+    if média > média_Reprovação < média_Final:   #elif média > média_Reprovação and média < média_Final: - Esse ajuste garante que a classificação de Recuperação seja feita corretamente.
         situacao = "Recuperação";
         print("Você está de Recuperação. ")
     elif média <= média_Reprovação:
@@ -30,9 +30,6 @@ for i in range(Quantidade):
     
     print(f"Média do Aluno {nome} é: {média:.2f}")
 
-    print("Lista de Alunos: ")
-    for Aluno in Nomes:
-        print(Aluno)
 
     Aluno = {
         "nome": nome,
@@ -43,6 +40,10 @@ for i in range(Quantidade):
         "situacao": situacao
     }
     Nomes.append(Aluno)
+
+    #print("Lista de Alunos: ")#
+    #for Aluno in Nomes:#
+        #print(Aluno)#
 
 print('''---Resumo da turma---''')   
 
