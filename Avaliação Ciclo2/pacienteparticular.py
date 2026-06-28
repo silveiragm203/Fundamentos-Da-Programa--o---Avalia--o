@@ -1,9 +1,5 @@
 from paciente import Paciente
-# Atributos adicionais
-# forma_pagamento — string · ex: "Cartão", "Pix", "Dinheiro"
-# desconto_fidelidade — float · desconto aplicado por fidelidade (ex: 0.10 = 10%)
 
-# Classe Filha, Subclasse
 class Paciente_particular(Paciente):
     def __init__(self, nome: str, data_nascimento: str, cpf: str, telefone: str, tipo_sanguineo: str, numero_prontuario: str, forma_pagamento: str, desconto_fidelidade: float):
         super().__init__(
