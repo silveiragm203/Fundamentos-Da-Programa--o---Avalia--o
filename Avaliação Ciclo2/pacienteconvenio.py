@@ -8,7 +8,8 @@ class Paciente_convenio(Paciente):
             cpf, 
             telefone, 
             tipo_sanguineo, 
-            numero_prontuario)
+            numero_prontuario
+            )
         
         self.nome_convenio = nome_convenio
         self.numero_carteira = numero_carteira
@@ -20,19 +21,4 @@ class Paciente_convenio(Paciente):
     def exibir_informacoes(self, detalhado = False):
         super().exibir_informacoes(detalhado)
         print(f"Convênio: {self.nome_convenio}")
-        print(f"Número da carteirinha: {self.numero_carteirinha}")
-        
-
-paciente = Paciente_convenio(
-    "Maria Silva",
-    35,
-    "123.456.789-00",
-    "(11) 99999-9999",
-    "Rua das Flores, 123",
-    "maria@email.com",
-    "Unimed",
-    "987654321"
-)
-
-paciente.exibir_informacoes(detalhado=True)
-paciente.registrar_autorizacao("Consulta cardiológica", 0)
+        print(f"Número da carteirinha: {self.numero_carteira}")

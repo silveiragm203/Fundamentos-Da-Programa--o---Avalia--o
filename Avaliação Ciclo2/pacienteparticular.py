@@ -11,7 +11,7 @@ class Paciente_particular(Paciente):
         )
 
         self.forma_pagamento = forma_pagamento
-        self.desconto_fidelidade = desconto_fidelidade
+        self.desconto_fidelidade = float(desconto_fidelidade)
     
     def calcular_valor_final(self, valor_consulta, taxa_urgencia):
         valor = valor_consulta + taxa_urgencia
@@ -24,6 +24,3 @@ class Paciente_particular(Paciente):
         print(f"Desconto fidelidade: {self.desconto_fidelidade * 100:.0f}%")
         return super().exibir_informacoes(detalhado)
     
-pessoa1 = Paciente_particular("Felipe","20/06/1999","19282977730","341251243","A+","219422","Pix",0.10)
-
-pessoa1.exibir_informacoes(True)
